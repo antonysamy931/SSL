@@ -7,19 +7,20 @@ Self signed certificate:
 2. makecert.exe used to create a self signed security certificate.
    pvk2pfx.exe used to create personal information exchange certificate.
 
-	ex :	Make local directory for store certificate. Navigate to maked folder.
-		--------------------------
-		create security certificate
-		--------------------------
-		makecert -r -pe -n "CN=First certificate creation" first.cer -sv first.pvk -a sha512 -sky exchange -b 01/01/2015 -e 01/01/2050
-		press enter 
-		first.cer and first.pvk file created inside that folder
-		-----------------------------------
-		create personal infomation exchange
-		-----------------------------------
-		pvk2pfx -pvk first.pvk -spc first.cer -pfx first.pfx -po password
-		press enter
-		first.pfx file created inside created folder
+   ex :	Make local directory for store certificate. Navigate to maked folder.
+   
+   --------------------------
+   create security certificate
+   --------------------------
+   makecert -r -pe -n "CN=First certificate creation" first.cer -sv first.pvk -a sha512 -sky exchange -b 01/01/2015 -e 01/01/2050
+   press enter 
+   first.cer and first.pvk file created inside that folder
+   -----------------------------------
+   create personal infomation exchange
+   -----------------------------------
+   pvk2pfx -pvk first.pvk -spc first.cer -pfx first.pfx -po password
+   press enter
+   first.pfx file created inside created folder
 		
 3. Open run and type mmc -> file -> add or remove snap in -> left panel select certificate and add
 4. Personal -> certificate -> import certificate to certificate folder
